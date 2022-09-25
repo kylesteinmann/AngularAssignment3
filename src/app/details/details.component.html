@@ -1,0 +1,16 @@
+
+<button
+(click) = "onToggleDetails()" class="btn btn-primary">
+  Display Details!
+</button>
+
+<p
+*ngIf="revealed">{{password}}
+</p>
+
+<div *ngFor = "let logClick of clicks"
+[ngStyle]="{backgroundColor: logClick >= 5 ? 'blue' : 'transparent'}"
+[ngClass]="{'white-text': logClick >= 5}"
+>
+{{logClick}}
+</div>
